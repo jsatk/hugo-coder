@@ -172,3 +172,21 @@
     }
   }
 }
+
+.article-img-right,
+.article-img-left {
+  border: 4px solid $link-color;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1rem;
+  max-width: 33%;
+}
+
+.article-img-left {
+  float: left;
+  margin: 1rem 2rem 1rem 0;
+}
+
+.article-img-right {
+  float: right;
+  margin: 1rem 0 1rem 2rem;
+}
