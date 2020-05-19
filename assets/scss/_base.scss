@@ -32,47 +32,45 @@ a {
   }
 }
 
-p {
-  a {
-    color: $link-color;
-    position: relative;
+a {
+  color: $link-color;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
     transition: all 0.2s ease-in-out;
+    opacity: 0;
+    background-color: $link-color;
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%;
+  }
+
+  &:hover {
+    color: $fg-color;
+    cursor: pointer;
+    text-decoration: none;
 
     &:before,
     &:after {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      width: 0;
-      height: 1px;
-      transition: all 0.2s ease-in-out;
-      opacity: 0;
-      background-color: $link-color;
+      width: 50%;
+      opacity: 1;
     }
+  }
 
-    &:before {
-      left: 50%;
-    }
-
-    &:after {
-      right: 50%;
-    }
-
-    &:hover {
-      color: $fg-color;
-      cursor: pointer;
-      text-decoration: none;
-
-      &:before,
-      &:after {
-        width: 50%;
-        opacity: 1;
-      }
-    }
-
-    &:focus {
-      color: $link-color;
-    }
+  &:focus {
+    color: $link-color;
   }
 }
 
